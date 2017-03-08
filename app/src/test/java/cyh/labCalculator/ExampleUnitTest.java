@@ -1,4 +1,4 @@
-package com.example.dell1.helloandroid;
+package cyh.labCalculator;
 
 import org.junit.Test;
 

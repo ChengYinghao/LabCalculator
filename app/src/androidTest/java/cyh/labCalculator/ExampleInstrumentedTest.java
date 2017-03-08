@@ -1,4 +1,4 @@
-package com.example.dell1.helloandroid;
+package cyh.labCalculator;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;
