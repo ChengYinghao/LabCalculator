@@ -26,6 +26,7 @@ class MainActivity : Activity(), View.OnClickListener {
 	private val buttonDL0 by lazy { findViewById(R.id.b_Dl0) as Button }
 	private val buttonDx by lazy { findViewById(R.id.b_Dx) as Button }
 	private val buttonDy by lazy { findViewById(R.id.b_Dy) as Button }
+    private val buttonpoint by lazy{findViewById(R.id.point)as Button}
 	
 	private var str = ""
 	private var f: Double = 0.0
@@ -66,6 +67,7 @@ class MainActivity : Activity(), View.OnClickListener {
 		buttonDL0.setOnClickListener(this)
 		buttonDx.setOnClickListener(this)
 		buttonDy.setOnClickListener(this)
+        buttonpoint.setOnClickListener(this)
 	}
 	
 	override fun onClick(view: View) {
