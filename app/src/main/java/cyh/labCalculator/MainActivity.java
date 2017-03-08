@@ -43,7 +43,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
 	
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.main);
+		setContentView(R.layout.activity_main);
 		output = (EditText) findViewById(R.id.output);
 		output.setText("请输入f,m0,l0,Dm,Dl0,Dx,Dy的值");
 		
