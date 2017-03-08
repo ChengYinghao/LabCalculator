@@ -26,7 +26,7 @@ class MainActivity : Activity(), View.OnClickListener {
 	private val buttonDL0 by lazy { findViewById(R.id.b_Dl0) as Button }
 	private val buttonDx by lazy { findViewById(R.id.b_Dx) as Button }
 	private val buttonDy by lazy { findViewById(R.id.b_Dy) as Button }
-	private val buttonpoint by lazy { findViewById(R.id.point) as Button }
+	private val buttonPoint by lazy { findViewById(R.id.point) as Button }
 
 	private var str = ""
 	private var f: Double = 0.0
@@ -67,7 +67,7 @@ class MainActivity : Activity(), View.OnClickListener {
 		buttonDL0.setOnClickListener(this)
 		buttonDx.setOnClickListener(this)
 		buttonDy.setOnClickListener(this)
-		buttonpoint.setOnClickListener(this)
+		buttonPoint.setOnClickListener(this)
 
 	}
 		override fun onClick(view: View) {
@@ -144,8 +144,8 @@ class MainActivity : Activity(), View.OnClickListener {
 		}
 	fun check(){
 		if(f * m0 * l0 * Dx * Dy * Dl0 * Dm != 0.0){
-			uncertaintyCount();
-			output.setText("Uf"+Uf+" "+"Ub"+Ub+" "+"Up"+Up)
+			uncertaintyCount()
+			output.setText("Uf$Uf\nUb$Ub\nUp$Up")
 		}
 	}
 }

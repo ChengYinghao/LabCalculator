@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
 	xmlns:android="http://schemas.android.com/apk/res/android"
-	xmlns:tools="http://schemas.android.com/tools"
 	android:layout_width="fill_parent"
 	android:layout_height="fill_parent"
 	android:orientation="vertical">
+	
 	
 	<EditText
 		android:id="@+id/et_input"
@@ -12,6 +12,16 @@
 		android:layout_height="wrap_content"
 		android:layout_gravity="center"
 		android:editable="false"/>
+	
+	<EditText
+		android:id="@+id/et_output"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_gravity="top|center"
+		android:gravity="top"
+		android:inputType="text"
+		android:text="弦振动试验不确定度"
+		android:visibility="visible"/>
 	
 	<GridLayout
 		android:layout_width="match_parent"
@@ -195,16 +205,6 @@
 			android:textSize="18sp"/>
 	</GridLayout>
 
-
-	<EditText
-		android:id="@+id/et_output"
-		android:layout_width="333dp"
-		android:layout_height="wrap_content"
-		android:layout_gravity="top|center"
-		android:gravity="top"
-		android:inputType="text"
-		android:text="弦振动试验不确定度"
-		android:visibility="visible" />
 
 </LinearLayout>
 
