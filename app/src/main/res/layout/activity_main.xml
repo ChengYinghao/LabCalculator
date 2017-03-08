@@ -6,7 +6,7 @@
 	android:orientation="vertical">
 	
 	<EditText
-		android:id="@+id/input"
+		android:id="@+id/et_input"
 		android:layout_width="fill_parent"
 		android:layout_height="wrap_content"
 		android:layout_gravity="center"
@@ -19,7 +19,7 @@
 		android:rowCount="5">
 		
 		<Button
-			android:id="@+id/one"
+			android:id="@+id/b_one"
 			android:layout_width="wrap_content"
 			android:layout_height="wrap_content"
 			android:layout_column="0"
@@ -28,7 +28,7 @@
 			android:textSize="18sp"/>
 		
 		<Button
-			android:id="@+id/two"
+			android:id="@+id/b_two"
 			android:layout_width="wrap_content"
 			android:layout_height="wrap_content"
 			android:layout_column="1"
@@ -37,7 +37,7 @@
 			android:textSize="18sp"/>
 		
 		<Button
-			android:id="@+id/three"
+			android:id="@+id/b_three"
 			android:layout_width="wrap_content"
 			android:layout_height="wrap_content"
 			android:layout_column="2"
@@ -46,7 +46,7 @@
 			android:textSize="18sp"/>
 		
 		<Button
-			android:id="@+id/four"
+			android:id="@+id/b_four"
 			android:layout_width="wrap_content"
 			android:layout_height="wrap_content"
 			android:layout_column="0"
@@ -55,7 +55,7 @@
 			android:textSize="18sp"/>
 		
 		<Button
-			android:id="@+id/five"
+			android:id="@+id/b_five"
 			android:layout_width="wrap_content"
 			android:layout_height="wrap_content"
 			android:layout_column="1"
@@ -64,7 +64,7 @@
 			android:textSize="18sp"/>
 		
 		<Button
-			android:id="@+id/six"
+			android:id="@+id/b_six"
 			android:layout_width="wrap_content"
 			android:layout_height="wrap_content"
 			android:layout_column="2"
@@ -73,7 +73,7 @@
 			android:textSize="18sp"/>
 		
 		<Button
-			android:id="@+id/seven"
+			android:id="@+id/b_seven"
 			android:layout_width="wrap_content"
 			android:layout_height="wrap_content"
 			android:layout_column="0"
@@ -82,7 +82,7 @@
 			android:textSize="18sp"/>
 		
 		<Button
-			android:id="@+id/eight"
+			android:id="@+id/b_eight"
 			android:layout_width="wrap_content"
 			android:layout_height="wrap_content"
 			android:layout_column="1"
@@ -91,7 +91,7 @@
 			android:textSize="18sp"/>
 		
 		<Button
-			android:id="@+id/nine"
+			android:id="@+id/b_nine"
 			android:layout_width="wrap_content"
 			android:layout_height="wrap_content"
 			android:layout_column="2"
@@ -100,7 +100,7 @@
 			android:textSize="18sp"/>
 		
 		<Button
-			android:id="@+id/zero"
+			android:id="@+id/b_zero"
 			android:layout_width="wrap_content"
 			android:layout_height="wrap_content"
 			android:layout_column="0"
@@ -111,7 +111,7 @@
 			android:textSize="18sp"/>
 		
 		<Button
-			android:id="@+id/f"
+			android:id="@+id/b_f"
 			android:layout_width="wrap_content"
 			android:layout_height="wrap_content"
 			android:layout_column="3"
@@ -120,17 +120,17 @@
 			android:textSize="18sp"/>
 		
 		<Button
-			android:id="@+id/m0"
+			android:id="@+id/b_m0"
 			android:layout_width="wrap_content"
 			android:layout_height="wrap_content"
-			android:layout_below="@id/f"
+			android:layout_below="@id/b_f"
 			android:layout_column="3"
 			android:layout_row="1"
 			android:text="m"
 			android:textSize="18sp"/>
 		
 		<Button
-			android:id="@+id/Dm"
+			android:id="@+id/b_Dm"
 			android:layout_width="wrap_content"
 			android:layout_height="wrap_content"
 			android:layout_column="2"
@@ -139,7 +139,7 @@
 			android:textSize="18sp"/>
 		
 		<Button
-			android:id="@+id/l0"
+			android:id="@+id/b_l0"
 			android:layout_width="wrap_content"
 			android:layout_height="wrap_content"
 			android:layout_column="3"
@@ -148,7 +148,7 @@
 			android:textSize="18sp"/>
 		
 		<Button
-			android:id="@+id/Dy"
+			android:id="@+id/b_Dy"
 			android:layout_width="wrap_content"
 			android:layout_height="wrap_content"
 			android:layout_column="3"
@@ -157,17 +157,17 @@
 			android:textSize="18sp"/>
 		
 		<Button
-			android:id="@+id/Dx"
+			android:id="@+id/b_Dx"
 			android:layout_width="wrap_content"
 			android:layout_height="wrap_content"
-			android:layout_below="@id/l0"
+			android:layout_below="@id/b_l0"
 			android:layout_column="1"
 			android:layout_row="4"
 			android:text="Δx"
 			android:textSize="18sp"/>
 		
 		<Button
-			android:id="@+id/Dl0"
+			android:id="@+id/b_Dl0"
 			android:layout_width="wrap_content"
 			android:layout_height="wrap_content"
 			android:layout_column="0"
@@ -195,7 +195,7 @@
 	</GridLayout>
 	
 	<EditText
-		android:id="@+id/output"
+		android:id="@+id/et_output"
 		android:layout_width="match_parent"
 		android:layout_height="wrap_content"
 		android:layout_gravity="center"

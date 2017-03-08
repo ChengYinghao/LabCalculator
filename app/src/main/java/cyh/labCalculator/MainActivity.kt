@@ -7,133 +7,112 @@ import android.widget.Button
 import android.widget.EditText
 
 class MainActivity : Activity(), View.OnClickListener {
-	private var output: EditText? = null
-	private var input: EditText? = null
-	private var btn1: Button? = null
-	private var btn2: Button? = null
-	private var btn3: Button? = null
-	private var btn4: Button? = null
-	private var btn5: Button? = null
-	private var btn6: Button? = null
-	private var btn7: Button? = null
-	private var btn8: Button? = null
-	private var btn9: Button? = null
-	private var btnf: Button? = null
-	private var btnm0: Button? = null
-	private var btnl0: Button? = null
-	private var btnDm: Button? = null
-	private var btnDl0: Button? = null
-	private var btnDx: Button? = null
-	private var btnDy: Button? = null
+	private val output by lazy { findViewById(R.id.et_output) as EditText }
+	private val input by lazy { findViewById(R.id.et_input) as EditText }
+	private val button0 by lazy { findViewById(R.id.b_zero) as Button }
+	private val button1 by lazy { findViewById(R.id.b_one) as Button }
+	private val button2 by lazy { findViewById(R.id.b_two) as Button }
+	private val button3 by lazy { findViewById(R.id.b_three) as Button }
+	private val button4 by lazy { findViewById(R.id.b_four) as Button }
+	private val button5 by lazy { findViewById(R.id.b_five) as Button }
+	private val button6 by lazy { findViewById(R.id.b_six) as Button }
+	private val button7 by lazy { findViewById(R.id.b_seven) as Button }
+	private val button8 by lazy { findViewById(R.id.b_eight) as Button }
+	private val button9 by lazy { findViewById(R.id.b_nine) as Button }
+	private val buttonF by lazy { findViewById(R.id.b_f) as Button }
+	private val buttonM0 by lazy { findViewById(R.id.b_m0) as Button }
+	private val buttonL0 by lazy { findViewById(R.id.b_l0) as Button }
+	private val buttonDm by lazy { findViewById(R.id.b_Dm) as Button }
+	private val buttonDL0 by lazy { findViewById(R.id.b_Dl0) as Button }
+	private val buttonDx by lazy { findViewById(R.id.b_Dx) as Button }
+	private val buttonDy by lazy { findViewById(R.id.b_Dy) as Button }
 	
 	private var str = ""
-	private var f: Double = 0.toDouble()
-	private var p: Double = 0.toDouble()
-	private var m0: Double = 0.toDouble()
-	private var l0: Double = 0.toDouble()
-	private var Dm: Double = 0.toDouble()
-	private var Dl0: Double = 0.toDouble()
-	private var Dx: Double = 0.toDouble()
-	private var Dy: Double = 0.toDouble()
-	private var Uf: Double = 0.toDouble()
-	private var Up: Double = 0.toDouble()
-	private var Um0: Double = 0.toDouble()
-	private var Ul0: Double = 0.toDouble()
-	private var Ub: Double = 0.toDouble()
+	private var f: Double = 0.0
+	private var p: Double = 0.0
+	private var m0: Double = 0.0
+	private var l0: Double = 0.0
+	private var Dm: Double = 0.0
+	private var Dl0: Double = 0.0
+	private var Dx: Double = 0.0
+	private var Dy: Double = 0.0
+	private var Uf: Double = 0.0
+	private var Up: Double = 0.0
+	private var Um0: Double = 0.0
+	private var Ul0: Double = 0.0
+	private var Ub: Double = 0.0
 	
 	public override fun onCreate(savedInstanceState: Bundle?) {
 		super.onCreate(savedInstanceState)
 		setContentView(R.layout.activity_main)
-		output = findViewById(R.id.output) as EditText
-		output!!.setText("请输入f,m0,l0,Dm,Dl0,Dx,Dy的值")
+		output.setText("请输入f,m0,l0,Dm,Dl0,Dx,Dy的值")
 		
-		input = findViewById(R.id.input) as EditText
-		input!!.setText(str)
+		input.setText(str)
 		
-		
-		val btn0 = findViewById(R.id.zero) as Button
-		btn1 = findViewById(R.id.one) as Button
-		btn2 = findViewById(R.id.two) as Button
-		btn3 = findViewById(R.id.three) as Button
-		btn4 = findViewById(R.id.four) as Button
-		btn5 = findViewById(R.id.five) as Button
-		btn6 = findViewById(R.id.six) as Button
-		btn7 = findViewById(R.id.seven) as Button
-		btn8 = findViewById(R.id.eight) as Button
-		btn9 = findViewById(R.id.nine) as Button
-		
-		btnf = findViewById(R.id.f) as Button
-		btnm0 = findViewById(R.id.m0) as Button
-		btnl0 = findViewById(R.id.l0) as Button
-		btnDm = findViewById(R.id.Dm) as Button
-		btnDl0 = findViewById(R.id.Dl0) as Button
-		btnDx = findViewById(R.id.Dx) as Button
-		btnDy = findViewById(R.id.Dy) as Button
-		
-		btn0.setOnClickListener(this)
-		btn1!!.setOnClickListener(this)
-		btn2!!.setOnClickListener(this)
-		btn3!!.setOnClickListener(this)
-		btn4!!.setOnClickListener(this)
-		btn5!!.setOnClickListener(this)
-		btn6!!.setOnClickListener(this)
-		btn7!!.setOnClickListener(this)
-		btn8!!.setOnClickListener(this)
-		btn9!!.setOnClickListener(this)
-		btnf!!.setOnClickListener(this)
-		btnm0!!.setOnClickListener(this)
-		btnl0!!.setOnClickListener(this)
-		btnDm!!.setOnClickListener(this)
-		btnDl0!!.setOnClickListener(this)
-		btnDx!!.setOnClickListener(this)
-		btnDy!!.setOnClickListener(this)
+		button0.setOnClickListener(this)
+		button1.setOnClickListener(this)
+		button2.setOnClickListener(this)
+		button3.setOnClickListener(this)
+		button4.setOnClickListener(this)
+		button5.setOnClickListener(this)
+		button6.setOnClickListener(this)
+		button7.setOnClickListener(this)
+		button8.setOnClickListener(this)
+		button9.setOnClickListener(this)
+		buttonF.setOnClickListener(this)
+		buttonM0.setOnClickListener(this)
+		buttonL0.setOnClickListener(this)
+		buttonDm.setOnClickListener(this)
+		buttonDL0.setOnClickListener(this)
+		buttonDx.setOnClickListener(this)
+		buttonDy.setOnClickListener(this)
 	}
 	
 	override fun onClick(view: View) {
 		when (view.id) {
-			R.id.zero -> num(0)
-			R.id.one -> num(1)
-			R.id.two -> num(2)
-			R.id.three -> num(3)
-			R.id.four -> num(4)
-			R.id.five -> num(5)
-			R.id.six -> num(6)
-			R.id.seven -> num(7)
-			R.id.eight -> num(8)
-			R.id.nine -> num(9)
+			R.id.b_zero -> num(0)
+			R.id.b_one -> num(1)
+			R.id.b_two -> num(2)
+			R.id.b_three -> num(3)
+			R.id.b_four -> num(4)
+			R.id.b_five -> num(5)
+			R.id.b_six -> num(6)
+			R.id.b_seven -> num(7)
+			R.id.b_eight -> num(8)
+			R.id.b_nine -> num(9)
 			R.id.point -> addPoint()
-			R.id.f -> {
+			R.id.b_f -> {
 				f = java.lang.Double.parseDouble(str)
 				str = ""
 			}
-			R.id.m0 -> {
+			R.id.b_m0 -> {
 				m0 = java.lang.Double.parseDouble(str)
 				str = ""
 			}
-			R.id.l0 -> {
+			R.id.b_l0 -> {
 				l0 = java.lang.Double.parseDouble(str)
 				str = ""
 			}
-			R.id.Dm -> {
+			R.id.b_Dm -> {
 				Dm = java.lang.Double.parseDouble(str)
 				str = ""
 			}
-			R.id.Dl0 -> {
+			R.id.b_Dl0 -> {
 				Dl0 = java.lang.Double.parseDouble(str)
 				str = ""
 			}
-			R.id.Dx -> {
+			R.id.b_Dx -> {
 				Dx = java.lang.Double.parseDouble(str)
 				str = ""
 			}
-			R.id.Dy -> {
+			R.id.b_Dy -> {
 				Dy = java.lang.Double.parseDouble(str)
 				str = ""
 			}
 		}
 		if (f * m0 * l0 * Dm * Dl0 * Dx * Dy != 0.0) {
 			uncertaintyCount()
-			output!!.setText("Uf:$Uf Up:$Up Ub:$Ub ")
+			output.setText("Uf:$Uf Up:$Up Ub:$Ub ")
 		}
 	}
 	
@@ -148,12 +127,12 @@ class MainActivity : Activity(), View.OnClickListener {
 	}
 	
 	fun num(n: Int) {
-		str = str + n.toString()
-		input!!.setText(str)
+		str += n.toString()
+		input.setText(str)
 	}
 	
 	fun addPoint() {
-		str = str + "."
-		input!!.setText(str)
+		str += "."
+		input.setText(str)
 	}
 }
