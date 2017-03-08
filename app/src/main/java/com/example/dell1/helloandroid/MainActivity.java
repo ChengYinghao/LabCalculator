@@ -10,7 +10,6 @@ import android.widget.EditText;
 public class MainActivity extends Activity implements View.OnClickListener {
 	private EditText output;
 	private EditText input;
-	private Button btn0;
 	private Button btn1;
 	private Button btn2;
 	private Button btn3;
@@ -51,7 +50,206 @@ public class MainActivity extends Activity implements View.OnClickListener {
 		
 		input = (EditText) findViewById(R.id.input);
 		input.setText(str);
-		btn0 = (Button) findViewById(R.id.zero);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		Button btn0 = (Button) findViewById(R.id.zero);
 		btn1 = (Button) findViewById(R.id.one);
 		btn2 = (Button) findViewById(R.id.two);
 		btn3 = (Button) findViewById(R.id.three);
@@ -90,72 +288,74 @@ public class MainActivity extends Activity implements View.OnClickListener {
 	}
 	
 	public void onClick(View view) {
-		switch (view.getId()) {
-			case R.id.zero:
-				num(0);
-				break;
-			case R.id.one:
-				num(1);
-				break;
-			case R.id.two:
-				num(2);
-				break;
-			case R.id.three:
-				num(3);
-				break;
-			case R.id.four:
-				num(4);
-				break;
-			case R.id.five:
-				num(5);
-				break;
-			case R.id.six:
-				num(6);
-				break;
-			case R.id.seven:
-				num(7);
-				break;
-			case R.id.eight:
-				num(8);
-				break;
-			case R.id.nine:
-				num(9);
-				break;
-			case R.id.point:
-				addPoint();
-				break;
-			case R.id.f:
-				f = Double.parseDouble(str);
-				str = "";
-				break;
-			case R.id.m0:
-				m0 = Double.parseDouble(str);
-				str = "";
-				break;
-			case R.id.l0:
-				l0 = Double.parseDouble(str);
-				str = "";
-				break;
-			case R.id.Dm:
-				Dm = Double.parseDouble(str);
-				str = "";
-				break;
-			case R.id.Dl0:
-				Dl0 = Double.parseDouble(str);
-				str = "";
-				break;
-			case R.id.Dx:
-				Dx = Double.parseDouble(str);
-				str = "";
-				break;
-			case R.id.Dy:
-				Dy = Double.parseDouble(str);
-				str = "";
-				break;
-		}
-		uncertaintyCount();
-		output.setText("Uf:" + Uf + " " + "Up:" + Up + " " + "Ub:" + Ub + " ");
-	}
+        switch (view.getId()) {
+            case R.id.zero:
+                num(0);
+                break;
+            case R.id.one:
+                num(1);
+                break;
+            case R.id.two:
+                num(2);
+                break;
+            case R.id.three:
+                num(3);
+                break;
+            case R.id.four:
+                num(4);
+                break;
+            case R.id.five:
+                num(5);
+                break;
+            case R.id.six:
+                num(6);
+                break;
+            case R.id.seven:
+                num(7);
+                break;
+            case R.id.eight:
+                num(8);
+                break;
+            case R.id.nine:
+                num(9);
+                break;
+            case R.id.point:
+                addPoint();
+                break;
+            case R.id.f:
+                f = Double.parseDouble(str);
+                str = "";
+                break;
+            case R.id.m0:
+                m0 = Double.parseDouble(str);
+                str = "";
+                break;
+            case R.id.l0:
+                l0 = Double.parseDouble(str);
+                str = "";
+                break;
+            case R.id.Dm:
+                Dm = Double.parseDouble(str);
+                str = "";
+                break;
+            case R.id.Dl0:
+                Dl0 = Double.parseDouble(str);
+                str = "";
+                break;
+            case R.id.Dx:
+                Dx = Double.parseDouble(str);
+                str = "";
+                break;
+            case R.id.Dy:
+                Dy = Double.parseDouble(str);
+                str = "";
+                break;
+        }
+        if (f * m0 * l0 * Dm * Dl0 * Dx * Dy != 0) {
+            uncertaintyCount();
+            output.setText("Uf:" + Uf + " " + "Up:" + Up + " " + "Ub:" + Ub + " ");
+        }
+    }
 	
 	
 	public void uncertaintyCount() {
