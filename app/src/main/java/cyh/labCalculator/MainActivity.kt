@@ -145,7 +145,7 @@ class MainActivity : Activity(), View.OnClickListener {
 	fun check(){
 		if(f * m0 * l0 * Dx * Dy * Dl0 * Dm != 0.0){
 			uncertaintyCount()
-			output.setText("Uf$Uf \n Ub$Ub \n Up$Up")
+			output.setText( "Uf=$Uf \n Ub=$Ub \n Up=$Up")
 		}
 	}
 }
