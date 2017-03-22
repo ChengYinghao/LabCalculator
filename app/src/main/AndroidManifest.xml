@@ -1,33 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="cyh.labCalculator">
-
-    <application
-        android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
-        android:label="@string/app_name"
-        android:supportsRtl="true"
-        android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
-	    <activity
-	    android:name=".FirstActivity"
-	    android:label="弦振动">
-    </activity>
-	    <activity
-		    android:name=".SecondActivity"
-		    android:label="固体线膨胀系数">
-	    </activity>
-	    <activity android:name=".ThirdActivity">
-	    </activity>
-    </activity>
-	<activity android:name=".universal.UniversalCalculatorActivity">
-	</activity>
-    </application>
+<manifest package="cyh.labCalculator"
+          xmlns:android="http://schemas.android.com/apk/res/android">
+	
+	<application
+		android:allowBackup="true"
+		android:icon="@mipmap/ic_launcher"
+		android:label="@string/app_name"
+		android:supportsRtl="true"
+		android:theme="@style/AppTheme">
+		
+		<activity android:name=".MainActivity">
+			<intent-filter>
+				<action android:name="android.intent.action.MAIN"/>
+				
+				<category android:name="android.intent.category.LAUNCHER"/>
+			</intent-filter>
+		</activity>
+		
+		<activity
+			android:name=".FirstActivity"
+			android:label="弦振动">
+		</activity>
+		
+		<activity
+			android:name=".SecondActivity"
+			android:label="固体线膨胀系数">
+		</activity>
+		
+		<activity android:name=".ThirdActivity">
+		</activity>
+		
+		<activity android:name=".universal.UniversalCalculatorActivity"/>
+		
+	</application>
 
 </manifest>
