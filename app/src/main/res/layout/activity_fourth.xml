@@ -29,6 +29,12 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="M"/>
+            <EditText
+                android:id="@+id/Mt_input"
+                android:hint="Mt"
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
 
             <EditText
                 android:id="@+id/t2_input"

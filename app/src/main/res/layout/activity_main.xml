@@ -12,4 +12,9 @@
         android:text="固体线膨胀系数"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>
+    <Button
+        android:id="@+id/lab3"
+        android:text="液体线膨胀系数第一问"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
 </LinearLayout>

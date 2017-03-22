@@ -117,4 +117,11 @@ class SecondActivity : Activity() , View.OnClickListener{
 
 
 
-class LabVariable(var value:Double=0.0,var ua:Double=0.0,var ub:Double=0.0,var u:Double=0.0)
+class LabVariable(var value:Double=0.0,var ua:Double=0.0,var ub:Double=0.0,var u:Double=0.0){
+    operator fun plus(other:LabVariable): Double {
+        return this.value+other.value
+    }
+    operator fun minus(other: LabVariable):Double{
+        return this.value-other.value
+    }
+}

@@ -48,6 +48,12 @@ class ThirdActivity : AppCompatActivity() ,View.OnClickListener{
         return ua
     }
     fun calculate(){
+        t2.value=inputt2.text.toString().toDouble()
+        t1.value=inputt1.text.toString().toDouble()
+        δt=inputδt.text.toString().toDouble()
+        M2.value=inputM2.text.toString().toDouble()
+        M1.value=inputM1.text.toString().toDouble()
+        δM=inputδM.text.toString().toDouble()
         val listStringM= inputM.text.toString().split(" ")
         for(i in 0 until listStringM.size){
             ListM.add(listStringM[i].toDouble())
@@ -55,6 +61,21 @@ class ThirdActivity : AppCompatActivity() ,View.OnClickListener{
         val sum1:Double= (0 until ListM.size).sumByDouble { ListM[it] }
         M.value=sum1/ListM.size
         M.ua=calculateUa(ListM)
+        M.ub=δM/Math.sqrt(3.0)
+        M.u=Math.sqrt(Math.pow(M.ua,2.0)+Math.pow(M.ub,2.0))
+        M2.ub=δM/Math.sqrt(3.0)
+        M2.u=M2.ub
+        M1.u=M2.u
+        t1.u=δt/Math.sqrt(3.0)
+        t2.u=t1.u
+        var u1:Double=0.0
+        u1=Math.sqrt(Math.pow(M1.u,2.0)+Math.pow(M2.u,2.0))
+        var u2:Double=0.0
+        u2=Math.sqrt(Math.pow(M.u,2.0)+Math.pow(M2.u,2.0))
+        var u3:Double=Math.sqrt(Math.pow(t1.u,2.0)+Math.pow(t2.u,2.0))
+        var u4:Double=Math.sqrt(Math.pow(u2/(M-M2),2.0)+Math.pow(u3/(t2-t1),2.0))
+        var u5:Double=Math.sqrt(Math.pow(u1/(M2-M1),2.0)+Math.pow(u4,2.0))*(M2-M1)/(M-M2)/(t2-t1)
+        output.text="Um:$M.u U:$u5"
     }
 }
 
