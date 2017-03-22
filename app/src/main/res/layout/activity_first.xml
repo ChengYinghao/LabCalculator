@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent"
+	android:orientation="vertical">
+	
+	
+	<EditText
+		android:id="@+id/et_input"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:layout_gravity="center"
+		android:editable="false"/>
+
+	<EditText
+		android:id="@+id/et_output"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_gravity="top|center"
+		android:gravity="top"
+		android:inputType="textMultiLine"
+		android:text="弦振动试验不确定度"
+		android:visibility="visible" />
+	
+	<GridLayout
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:columnCount="4"
+		android:rowCount="5">
+		
+		<Button
+			android:id="@+id/b_one"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_column="0"
+			android:layout_row="2"
+			android:text="1"
+			android:textSize="18sp"/>
+		
+		<Button
+			android:id="@+id/b_two"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_column="1"
+			android:layout_row="2"
+			android:text="2"
+			android:textSize="18sp"/>
+		
+		<Button
+			android:id="@+id/b_three"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_column="2"
+			android:layout_row="2"
+			android:text="3"
+			android:textSize="18sp"/>
+		
+		<Button
+			android:id="@+id/b_four"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_column="0"
+			android:layout_row="1"
+			android:text="4"
+			android:textSize="18sp"/>
+		
+		<Button
+			android:id="@+id/b_five"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_column="1"
+			android:layout_row="1"
+			android:text="5"
+			android:textSize="18sp"/>
+		
+		<Button
+			android:id="@+id/b_six"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_column="2"
+			android:layout_row="1"
+			android:text="6"
+			android:textSize="18sp"/>
+		
+		<Button
+			android:id="@+id/b_seven"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_column="0"
+			android:layout_row="0"
+			android:text="7"
+			android:textSize="18sp"/>
+		
+		<Button
+			android:id="@+id/b_eight"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_column="1"
+			android:layout_row="0"
+			android:text="8"
+			android:textSize="18sp"/>
+		
+		<Button
+			android:id="@+id/b_nine"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_column="2"
+			android:layout_row="0"
+			android:text="9"
+			android:textSize="18sp"/>
+		
+		<Button
+			android:id="@+id/b_zero"
+			android:layout_height="wrap_content"
+			android:layout_column="0"
+			android:layout_columnSpan="2"
+			android:layout_gravity="fill_horizontal"
+			android:layout_row="3"
+			android:text="0"
+			android:textSize="18sp"/>
+		
+		<Button
+			android:id="@+id/b_f"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_column="3"
+			android:layout_row="0"
+			android:text="f"
+			android:textSize="18sp"/>
+		
+		<Button
+			android:id="@+id/b_m0"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_below="@id/b_f"
+			android:layout_column="3"
+			android:layout_row="1"
+			android:text="m"
+			android:textSize="18sp"/>
+		
+		<Button
+			android:id="@+id/b_Dm"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_column="2"
+			android:layout_row="4"
+			android:text="Δm"
+			android:textSize="18sp"/>
+		
+		<Button
+			android:id="@+id/b_l0"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_column="3"
+			android:layout_row="2"
+			android:text="L0"
+			android:textSize="18sp"/>
+		
+		<Button
+			android:id="@+id/b_Dy"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_column="3"
+			android:layout_row="3"
+			android:text="ΔY"
+			android:textSize="18sp"/>
+		
+		<Button
+			android:id="@+id/b_Dx"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_below="@id/b_l0"
+			android:layout_column="1"
+			android:layout_row="4"
+			android:text="Δx"
+			android:textSize="18sp"/>
+		
+		<Button
+			android:id="@+id/b_Dl0"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_column="0"
+			android:layout_row="4"
+			android:text="ΔL0"
+			android:textSize="18sp"/>
+		
+		<Button
+			android:id="@+id/uncertaintyCount"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_column="3"
+			android:layout_row="4"
+			android:text="不确定度"
+			android:textSize="18sp"/>
+		
+		<Button
+			android:id="@+id/point"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_column="2"
+			android:layout_row="3"
+			android:text="."
+			android:textSize="18sp"/>
+	</GridLayout>
+
+
+</LinearLayout>
+
