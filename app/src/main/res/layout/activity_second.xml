@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="fill_parent"
+              android:layout_height="fill_parent"
+              android:orientation="vertical">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/et_output"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top|center"
+                android:gravity="top"
+                android:inputType="textMultiLine"
+                android:text="固体线膨胀系数不确定度"
+                android:visibility="visible"/>
+
+            <EditText
+                android:id="@+id/x1_input"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="x1"
+                android:inputType="numberDecimal"/>
+
+            <EditText
+                android:id="@+id/x2_input"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="x2"
+                android:inputType="numberDecimal"/>
+
+            <EditText
+                android:id="@+id/y2_input"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="y2"
+                android:inputType="numberDecimal"/>
+
+            <TableLayout
+                android:id="@+id/tableLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TableRow>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="D"
+                        android:textSize="16sp"/>
+
+                    <EditText
+                        android:id="@+id/D_input"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="请输入D的测量值"/>
+                </TableRow>
+
+                <TableRow>
+
+                    <EditText
+                        android:id="@+id/R_input"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="请输入R的测量值"/>
+                </TableRow>
+
+                <TableRow>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="L"
+                        android:textSize="16sp"/>
+
+                    <EditText
+                        android:id="@+id/L_input"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="请输入L的测量值"/>
+                </TableRow>
+            </TableLayout>
+
+            <EditText
+                android:id="@+id/y1_input"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="y1"
+                android:inputType="numberDecimal"/>
+
+            <EditText
+                android:id="@+id/δy_input"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="δy"
+                android:inputType="numberDecimal"/>
+
+            <EditText
+                android:id="@+id/δR_input"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="δR"
+                android:inputType="numberDecimal"/>
+
+            <EditText
+                android:id="@+id/δD_input"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="δD"
+                android:inputType="numberDecimal"/>
+
+            <EditText
+                android:id="@+id/δL_input"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="δL"
+                android:inputType="numberDecimal"/>
+
+            <EditText
+                android:id="@+id/δx_input"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="δx"
+                android:inputType="numberDecimal"/>
+
+            <Button
+                android:id="@+id/ok"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="OK"
+                android:textSize="30sp"/>
+        </LinearLayout>
+    </ScrollView>
+
+
+</LinearLayout>
