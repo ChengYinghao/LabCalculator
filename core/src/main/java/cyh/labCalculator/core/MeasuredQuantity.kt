@@ -1,8 +1,9 @@
 package cyh.labCalculator.core
 
-class MeasuredQuantity(val uncertaintyB: Double = 0.0):UncertainQuantity {
-	
-	val measuredValues:ArrayList<Double> = ArrayList<Double>()
+class MeasuredQuantity(
+	val measuredValues:ArrayList<Double> = ArrayList<Double>(),
+	val uncertaintyB: Double = 0.0
+):UncertainQuantity {
 	
 	val valueCount:Int get()=measuredValues.size
 	
@@ -16,9 +17,6 @@ class MeasuredQuantity(val uncertaintyB: Double = 0.0):UncertainQuantity {
 			return Math.sqrt(uA * uA + uB * uB)
 		}
 	
-	override val dof: Int
-		get() = valueCount-1
-	
 	val uncertaintyA: Double
 		get() {
 			if (valueCount > 1) {
@@ -28,6 +26,5 @@ class MeasuredQuantity(val uncertaintyB: Double = 0.0):UncertainQuantity {
 				return 0.0
 			}
 		}
-	
 	
 }

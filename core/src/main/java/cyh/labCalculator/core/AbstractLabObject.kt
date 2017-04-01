@@ -8,6 +8,5 @@ interface LabQuantity:LabObject{
 
 interface UncertainQuantity:LabQuantity{
 	val uncertainty:Double
-	val dof: Int
 }
 
