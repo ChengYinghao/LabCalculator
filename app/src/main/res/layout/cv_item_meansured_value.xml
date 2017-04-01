@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="wrap_content"
+	android:layout_margin="10dp"
+	android:orientation="vertical">
+	
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:gravity="center_vertical"
+		android:orientation="horizontal">
+		
+		<TextView
+			android:id="@+id/tv_name"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_weight="0"
+			android:text="name: "
+			android:textAppearance="@style/TextAppearance.AppCompat.Large"
+			/>
+		
+		<EditText
+			android:id="@+id/et_name"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_weight="1"
+			android:ems="10"
+			android:inputType="textPersonName"
+			tools:text="MeansuredValue_1"/>
+	
+	</LinearLayout>
+	
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_marginTop="10dp"
+		android:gravity="center_vertical"
+		android:orientation="horizontal">
+		
+		<Spinner
+			android:id="@+id/sp_unsertantyType"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_weight="0"
+			tools:layout_height="50dp"
+			tools:layout_width="100dp"/>
+		
+		<EditText
+			android:id="@+id/et_unsertanty"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_weight="1"
+			android:ems="10"
+			android:inputType="textPersonName"
+			android:text="Name"
+			tools:text="0.01"/>
+	</LinearLayout>
+	
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_marginTop="10dp"
+		android:gravity="center_vertical"
+		android:orientation="horizontal">
+		
+		<TextView
+			android:id="@+id/tv_values"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_weight="0"
+			android:text="values: "
+			android:textAppearance="@style/TextAppearance.AppCompat.Large"/>
+		
+		<TextView
+			android:id="@+id/tv_valuesInfo"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_weight="1"
+			android:textAppearance="@style/TextAppearance.AppCompat.Large"
+			tools:text="average=123\ncount=10"/>
+		
+		<Button
+			android:id="@+id/b_valuesSpan"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_weight="0"
+			android:text="Span"/>
+	</LinearLayout>
+	
+	<ListView
+		android:id="@+id/lv_values"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_marginTop="10dp"
+		android:visibility="gone"
+		tools:layout_height="200dp"
+		tools:visibility="visible"/>
+
+
+</LinearLayout>
