@@ -1,16 +1,20 @@
 package cyh.labCalculator.core
 
-class MeasuredQuantity(
-	val measuredValues:ArrayList<Double> = ArrayList<Double>(),
-	val uncertaintyB: Double = 0.0
-):UncertainQuantity {
+import cyh.labCalculator.core.abstracts.LabQuantity
+
+class MeasuredQuantity : LabQuantity {
 	
-	val valueCount:Int get()=measuredValues.size
+	//数据部分
+	val measuredValues:MutableList<Double> = ArrayList<Double>()
 	
-	override val value: Double
+	val valueCount: Int get() = measuredValues.size
+	
+	val average:Double
 		get() = measuredValues.average()
+	override val value: Double
+		get() = average
 	
-	override val uncertainty: Double
+	val uncertainty: Double
 		get() {
 			val uA = uncertaintyA
 			val uB = uncertaintyB
@@ -21,10 +25,18 @@ class MeasuredQuantity(
 		get() {
 			if (valueCount > 1) {
 				val average = value
-				return Math.sqrt(measuredValues.sumByDouble { (it-average)*(it-average) }/(valueCount-1)/valueCount)
-			}else{
+				return Math.sqrt(measuredValues.sumByDouble { (it - average) * (it - average) } / (valueCount - 1) / valueCount)
+			} else {
 				return 0.0
 			}
 		}
+	
+	var uncertaintyB: Double = 0.0
+	var measureResolution: Double
+		get() = uncertaintyB * Math.sqrt(3.0)
+		set(value) {
+			uncertaintyB = value / Math.sqrt(3.0)
+		}
+	
 	
 }

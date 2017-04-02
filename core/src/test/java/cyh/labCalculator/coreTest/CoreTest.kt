@@ -10,8 +10,11 @@ class CoreTest{
 	
 	@Test
 	fun testMeasuredQuantity(){
-		val measuredValues = arrayListOf(5.5, 4.3, 5.3, 5.2)
-		val measuredQuantity = MeasuredQuantity(measuredValues, 0.1/Math.sqrt(3.0))
+		val measuredQuantity = MeasuredQuantity().apply {
+			measuredValues.addAll(arrayListOf(5.5, 4.3, 5.3, 5.2))
+			measureResolution =0.1
+		}
+
 		
 		
 		println("average:${measuredQuantity.value}")
