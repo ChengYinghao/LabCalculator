@@ -10,6 +10,7 @@
 	<LinearLayout
 		android:layout_width="match_parent"
 		android:layout_height="wrap_content"
+		android:layout_marginTop="0dp"
 		android:gravity="center_vertical"
 		android:orientation="horizontal">
 		
@@ -36,33 +37,33 @@
 	<LinearLayout
 		android:layout_width="match_parent"
 		android:layout_height="wrap_content"
-		android:layout_marginTop="10dp"
+		android:layout_marginTop="0dp"
 		android:gravity="center_vertical"
 		android:orientation="horizontal">
 		
-		<Spinner
-			android:id="@+id/sp_unsertantyType"
+		<TextView
+			android:id="@+id/tv_resolution"
 			android:layout_width="wrap_content"
 			android:layout_height="wrap_content"
-			android:layout_weight="0"
-			tools:layout_height="50dp"
-			tools:layout_width="100dp"/>
+			android:layout_weight="1"
+			android:text="resolution: "
+			android:textAppearance="@style/TextAppearance.AppCompat.Large"
+			/>
 		
 		<EditText
-			android:id="@+id/et_unsertanty"
+			android:id="@+id/et_unsertainty"
 			android:layout_width="wrap_content"
 			android:layout_height="wrap_content"
 			android:layout_weight="1"
 			android:ems="10"
 			android:inputType="textPersonName"
-			android:text="Name"
 			tools:text="0.01"/>
 	</LinearLayout>
 	
 	<LinearLayout
 		android:layout_width="match_parent"
 		android:layout_height="wrap_content"
-		android:layout_marginTop="10dp"
+		android:layout_marginTop="0dp"
 		android:gravity="center_vertical"
 		android:orientation="horizontal">
 		
@@ -94,10 +95,24 @@
 		android:id="@+id/lv_values"
 		android:layout_width="match_parent"
 		android:layout_height="wrap_content"
-		android:layout_marginTop="10dp"
+		android:layout_marginTop="0dp"
 		android:visibility="gone"
 		tools:layout_height="200dp"
 		tools:visibility="visible"/>
+	
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:layout_marginTop="0dp"
+		android:orientation="horizontal">
+		
+		<Button
+			android:id="@+id/b_run"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_weight="1"
+			android:text="Run"/>
+	</LinearLayout>
 
 
 </LinearLayout>
