@@ -106,9 +106,8 @@ class SecondActivity : Activity() , View.OnClickListener{
 
     }
     fun calculateUa(arrayList:ArrayList<Double>):Double{
-        var average:Double=0.0
         val sum:Double= (0..arrayList.size-1).sumByDouble { arrayList[it] }
-        average=sum/arrayList.size
+        val average=sum/arrayList.size
         val squareSum:Double= (0..arrayList.size-1).sumByDouble { Math.pow(arrayList[it]-average,2.0) }
         val ua:Double=Math.sqrt(squareSum/arrayList.size/(arrayList.size-1))
         return ua

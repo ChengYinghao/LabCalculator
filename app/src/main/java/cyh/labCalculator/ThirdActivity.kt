@@ -40,9 +40,8 @@ class ThirdActivity : AppCompatActivity() ,View.OnClickListener{
         }
     }
     fun calculateUa(arrayList:ArrayList<Double>):Double{
-        var average:Double=0.0
         val sum:Double= (0..arrayList.size-1).sumByDouble { arrayList[it] }
-        average=sum/arrayList.size
+        val average=sum/arrayList.size
         val squareSum:Double= (0..arrayList.size-1).sumByDouble { Math.pow(arrayList[it]-average,2.0) }
         val ua:Double=Math.sqrt(squareSum/arrayList.size/(arrayList.size-1))
         return ua
@@ -68,13 +67,11 @@ class ThirdActivity : AppCompatActivity() ,View.OnClickListener{
         M1.u=M2.u
         t1.u=δt/Math.sqrt(3.0)
         t2.u=t1.u
-        var u1:Double=0.0
-        u1=Math.sqrt(Math.pow(M1.u,2.0)+Math.pow(M2.u,2.0))
-        var u2:Double=0.0
-        u2=Math.sqrt(Math.pow(M.u,2.0)+Math.pow(M2.u,2.0))
-        var u3:Double=Math.sqrt(Math.pow(t1.u,2.0)+Math.pow(t2.u,2.0))
-        var u4:Double=Math.sqrt(Math.pow(u2/(M-M2),2.0)+Math.pow(u3/(t2-t1),2.0))
-        var u5:Double=Math.sqrt(Math.pow(u1/(M2-M1),2.0)+Math.pow(u4,2.0))*(M2-M1)/(M-M2)/(t2-t1)
+        val u1=Math.sqrt(Math.pow(M1.u,2.0)+Math.pow(M2.u,2.0))
+        val u2=Math.sqrt(Math.pow(M.u,2.0)+Math.pow(M2.u,2.0))
+        val u3:Double=Math.sqrt(Math.pow(t1.u,2.0)+Math.pow(t2.u,2.0))
+        val u4:Double=Math.sqrt(Math.pow(u2/(M-M2),2.0)+Math.pow(u3/(t2-t1),2.0))
+        val u5:Double=Math.sqrt(Math.pow(u1/(M2-M1),2.0)+Math.pow(u4,2.0))*(M2-M1)/(M-M2)/(t2-t1)
         output.text="Um:$M.u U:$u5"
     }
 }
