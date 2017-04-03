@@ -15,7 +15,6 @@
 		android:orientation="horizontal">
 		
 		<TextView
-			android:id="@+id/tv_name"
 			android:layout_width="wrap_content"
 			android:layout_height="wrap_content"
 			android:layout_weight="0"
@@ -42,7 +41,6 @@
 		android:orientation="horizontal">
 		
 		<TextView
-			android:id="@+id/tv_resolution"
 			android:layout_width="wrap_content"
 			android:layout_height="wrap_content"
 			android:layout_weight="1"
@@ -51,12 +49,12 @@
 			/>
 		
 		<EditText
-			android:id="@+id/et_unsertainty"
+			android:id="@+id/et_resolution"
 			android:layout_width="wrap_content"
 			android:layout_height="wrap_content"
 			android:layout_weight="1"
 			android:ems="10"
-			android:inputType="textPersonName"
+			android:inputType="numberDecimal"
 			tools:text="0.01"/>
 	</LinearLayout>
 	
@@ -68,50 +66,48 @@
 		android:orientation="horizontal">
 		
 		<TextView
-			android:id="@+id/tv_values"
 			android:layout_width="wrap_content"
 			android:layout_height="wrap_content"
 			android:layout_weight="0"
 			android:text="values: "
 			android:textAppearance="@style/TextAppearance.AppCompat.Large"/>
 		
-		<TextView
-			android:id="@+id/tv_valuesInfo"
-			android:layout_width="wrap_content"
-			android:layout_height="wrap_content"
-			android:layout_weight="1"
-			android:textAppearance="@style/TextAppearance.AppCompat.Large"
-			tools:text="average=123\ncount=10"/>
-		
-		<Button
-			android:id="@+id/b_valuesSpan"
-			android:layout_width="wrap_content"
+		<EditText
+			android:id="@+id/et_values"
+			android:layout_width="match_parent"
 			android:layout_height="wrap_content"
 			android:layout_weight="0"
-			android:text="Span"/>
-	</LinearLayout>
+			android:ems="10"
+			android:hint="可输入多组数据用\n（空格或回车隔开）"
+			android:inputType="textMultiLine"
+			tools:text="1.0\n2.0\n3.0"/>
 	
-	<ListView
-		android:id="@+id/lv_values"
-		android:layout_width="match_parent"
-		android:layout_height="wrap_content"
-		android:layout_marginTop="0dp"
-		android:visibility="gone"
-		tools:layout_height="200dp"
-		tools:visibility="visible"/>
+	</LinearLayout>
 	
 	<LinearLayout
 		android:layout_width="match_parent"
-		android:layout_height="match_parent"
-		android:layout_marginTop="0dp"
-		android:orientation="horizontal">
+		android:layout_height="wrap_content"
+		android:gravity="center_vertical"
+		android:orientation="vertical">
 		
 		<Button
 			android:id="@+id/b_run"
 			android:layout_width="wrap_content"
 			android:layout_height="wrap_content"
-			android:layout_weight="1"
+			android:layout_weight="0"
 			android:text="Run"/>
+		
+		<TextView
+			android:id="@+id/tv_valuesInfo"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_weight="1"
+			android:textAppearance="@style/TextAppearance.AppCompat.Large"
+			android:textSize="18sp"
+			android:visibility="gone"
+			tools:text="count=3\naverage=2.0\nuncertaintyA=0.32\nuncertaintyB=0.57"
+			tools:visibility="visible"/>
+	
 	</LinearLayout>
 
 

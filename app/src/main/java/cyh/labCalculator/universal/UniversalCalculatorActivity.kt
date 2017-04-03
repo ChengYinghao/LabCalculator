@@ -18,8 +18,11 @@ class UniversalCalculatorActivity : AppCompatActivity() {
 		
 		b_new.setOnClickListener {
 			val item=MeasuredQuantityView(this)
+			item.et_name.setText("Quantity_${(ll_items.childCount - 1)}")
 			ll_items.addView(item,ll_items.childCount-1)
 		}
+		
+		b_new.performClick()
 		
 	}
 }
