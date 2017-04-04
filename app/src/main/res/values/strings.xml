@@ -1,4 +1,17 @@
 <resources>
-	<string name="app_name">LabCalculator</string>
-	<string name="hello">Hello</string>
+	<string name="AppName">LabCalculator</string>
+	<string name="values_colon">values:</string>
+	<string name="resolution_colon">resolution:</string>
+	<string name="name_colon">name:</string>
+	<string name="run">Run</string>
+	<string name="hint_values">type the values split by spaces or enters</string>
+	<string name="add">Add</string>
+	<string name="measurement_of">measurement of %s :</string>
+	<string name="count">count</string>
+	<string name="average">average</string>
+	<string name="uncertainty">uncertainty</string>
+	<string name="nothing_more">(nothing more)</string>
+	<string name="less_useful_info">less useful info:</string>
+	<string name="uncertaintyA">uncertaintyA</string>
+	<string name="uncertaintyB">uncertaintyB</string>
 </resources>

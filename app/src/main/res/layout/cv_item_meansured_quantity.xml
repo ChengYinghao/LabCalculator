@@ -19,7 +19,7 @@
 			android:layout_width="wrap_content"
 			android:layout_height="wrap_content"
 			android:layout_weight="0"
-			android:text="name: "
+			android:text="@string/name_colon"
 			android:textAppearance="@style/TextAppearance.AppCompat.Large"
 			/>
 		
@@ -44,8 +44,8 @@
 		<TextView
 			android:layout_width="wrap_content"
 			android:layout_height="wrap_content"
-			android:layout_weight="1"
-			android:text="resolution: "
+			android:layout_weight="0"
+			android:text="@string/resolution_colon"
 			android:textAppearance="@style/TextAppearance.AppCompat.Large"
 			/>
 		
@@ -70,7 +70,7 @@
 			android:layout_width="wrap_content"
 			android:layout_height="wrap_content"
 			android:layout_weight="0"
-			android:text="values: "
+			android:text="@string/values_colon"
 			android:textAppearance="@style/TextAppearance.AppCompat.Large"/>
 		
 		<EditText
@@ -79,7 +79,7 @@
 			android:layout_height="wrap_content"
 			android:layout_weight="0"
 			android:ems="10"
-			android:hint="可输入多组数据用\n（空格或回车隔开）"
+			android:hint="@string/hint_values"
 			android:inputType="textMultiLine"
 			tools:text="1.0\n2.0\n3.0"/>
 	
@@ -97,7 +97,7 @@
 			android:layout_width="wrap_content"
 			android:layout_height="wrap_content"
 			android:layout_weight="0"
-			android:text="Run"/>
+			android:text="@string/run"/>
 		
 		<TextView
 			android:id="@+id/tv_valuesInfo"

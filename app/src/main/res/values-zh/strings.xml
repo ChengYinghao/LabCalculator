@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<string name="AppName">实验计算器</string>
+	<string name="name_colon">名称：</string>
+	<string name="resolution_colon">精度：</string>
+	<string name="run">计算</string>
+	<string name="values_colon">数据：</string>
+	<string name="hint_values">输入数据，用空格或回车隔开</string>
+	<string name="add">添加一项</string>
+	<string name="measurement_of">对 %s 的测量：</string>
+	<string name="count">数量</string>
+	<string name="uncertainty">不确定度</string>
+	<string name="average">平均值</string>
+	<string name="nothing_more">（没有更多信息了）</string>
+	<string name="less_useful_info">不常用信息：</string>
+	<string name="uncertaintyB">B类不确定度</string>
+	<string name="uncertaintyA">A类不确定度</string>
+</resources>

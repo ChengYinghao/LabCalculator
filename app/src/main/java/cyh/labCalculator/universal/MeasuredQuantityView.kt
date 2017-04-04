@@ -38,18 +38,17 @@ class MeasuredQuantityView(context: Context)
 			
 			val name=et_name.text
 			if(!name.isNullOrEmpty()) {
-				stringBuilder.appendln("measurement of $name:")
+				stringBuilder.appendln(resources.getString(R.string.measurement_of,name))
 			}
-			stringBuilder.appendln("count=$valueCount")
-			if (measuredValues.count() == 0) {
-				stringBuilder.appendln("(nothing more...)")
-			}else{
-				stringBuilder.appendln("average=$average")
-				stringBuilder.appendln("uncertainty=$uncertainty")
-				stringBuilder.appendln("less useful info:")
-				stringBuilder.appendln("uncertaintyA=$uncertaintyA")
-				stringBuilder.append("uncertaintyB=$uncertaintyB")
+			stringBuilder.appendln(resources.getString(R.string.count)+"=$valueCount")
+			if (measuredValues.count() != 0) {
+				stringBuilder.appendln(resources.getString(R.string.average)+"=$average")
+				stringBuilder.appendln(resources.getString(R.string.uncertainty)+"=$uncertainty")
+				stringBuilder.appendln(resources.getString(R.string.less_useful_info))
+				stringBuilder.appendln(resources.getString(R.string.uncertaintyA)+"=$uncertaintyA")
+				stringBuilder.appendln(resources.getString(R.string.uncertaintyB)+"=$uncertaintyB")
 			}
+			stringBuilder.append(resources.getString(R.string.nothing_more))
 			
 			tv_valuesInfo.text = stringBuilder.toString()
 			tv_valuesInfo.visibility=View.VISIBLE
