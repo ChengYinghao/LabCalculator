@@ -1,7 +1,8 @@
-package cyh.labCalculator
+package cyh.labCalculator.special
 
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
+import cyh.labCalculator.R
 
 class FourthActivity : AppCompatActivity() {
 

@@ -1,4 +1,4 @@
-package cyh.labCalculator
+package cyh.labCalculator.special
 
 import android.app.Activity
 import android.os.Bundle
@@ -6,9 +6,10 @@ import android.view.View
 import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
+import cyh.labCalculator.R
 
-class SecondActivity : Activity() , View.OnClickListener{
-    private val output by lazy{findViewById(R.id.et_output) as TextView}
+class SecondActivity : Activity() , View.OnClickListener {
+    private val output by lazy{findViewById(R.id.et_output) as TextView }
     private val inputD by lazy { findViewById(R.id.D_input) as EditText }
     private val inputR by lazy { findViewById(R.id.R_input) as EditText }
     private val inputL by lazy { findViewById(R.id.L_input) as EditText }
@@ -16,25 +17,25 @@ class SecondActivity : Activity() , View.OnClickListener{
     private val inputY2 by lazy { findViewById(R.id.y2_input) as EditText }
     private val inputX1 by lazy { findViewById(R.id.x1_input) as EditText }
     private val inputX2 by lazy { findViewById(R.id.x2_input) as EditText }
-    private val inputδx by lazy { findViewById(R.id.δx_input) as EditText}
+    private val inputδx by lazy { findViewById(R.id.δx_input) as EditText }
     private val inputδy by lazy { findViewById(R.id.δy_input) as EditText }
     private val btnOK by lazy { findViewById(R.id.ok) as Button }
     private val inputδD by lazy { findViewById(R.id.δD_input) as EditText }
     private val inputδR by lazy { findViewById(R.id.δR_input) as EditText }
     private val inputδL by lazy { findViewById(R.id.δL_input) as EditText }
 
-    private var α:LabVariable= LabVariable(0.0,0.0,0.0,0.0)
-    private var D:LabVariable= LabVariable(0.0,0.0,0.0,0.0)
-    private var valueR:LabVariable= LabVariable(0.0,0.0,0.0,0.0)
-    private var L:LabVariable= LabVariable(0.0,0.0,0.0,0.0)
-    private var k:LabVariable= LabVariable(0.0,0.0,0.0,0.0)
+    private var α: LabVariable = LabVariable(0.0,0.0,0.0,0.0)
+    private var D: LabVariable = LabVariable(0.0,0.0,0.0,0.0)
+    private var valueR: LabVariable = LabVariable(0.0,0.0,0.0,0.0)
+    private var L: LabVariable = LabVariable(0.0,0.0,0.0,0.0)
+    private var k: LabVariable = LabVariable(0.0,0.0,0.0,0.0)
     private var ListD:ArrayList<Double> = ArrayList()
     private var ListR:ArrayList<Double> = ArrayList()
     private var ListL:ArrayList<Double> = ArrayList()
-    private var y1:LabVariable= LabVariable(0.0,0.0,0.0,0.0)
-    private var y2:LabVariable= LabVariable(0.0,0.0,0.0,0.0)
-    private var x1:LabVariable= LabVariable(0.0,0.0,0.0,0.0)
-    private var x2:LabVariable= LabVariable(0.0,0.0,0.0,0.0)
+    private var y1: LabVariable = LabVariable(0.0,0.0,0.0,0.0)
+    private var y2: LabVariable = LabVariable(0.0,0.0,0.0,0.0)
+    private var x1: LabVariable = LabVariable(0.0,0.0,0.0,0.0)
+    private var x2: LabVariable = LabVariable(0.0,0.0,0.0,0.0)
     private var δx:Double=0.0
     private var δy:Double=0.0
 
@@ -49,7 +50,7 @@ class SecondActivity : Activity() , View.OnClickListener{
         btnOK.setOnClickListener(this)
     }
 
-    override fun onClick(view:View){
+    override fun onClick(view: View){
         when(view.id){
             R.id.ok->calculate()
         }
@@ -117,7 +118,7 @@ class SecondActivity : Activity() , View.OnClickListener{
 
 
 class LabVariable(var value:Double=0.0,var ua:Double=0.0,var ub:Double=0.0,var u:Double=0.0){
-    operator fun plus(other:LabVariable): Double {
+    operator fun plus(other: LabVariable): Double {
         return this.value+other.value
     }
     operator fun minus(other: LabVariable):Double{

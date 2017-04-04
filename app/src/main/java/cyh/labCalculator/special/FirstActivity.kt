@@ -1,10 +1,11 @@
-package cyh.labCalculator
+package cyh.labCalculator.special
 
 import android.app.Activity
 import android.os.Bundle
 import android.view.View
 import android.widget.Button
 import android.widget.EditText
+import cyh.labCalculator.R
 
 class FirstActivity : Activity(), View.OnClickListener {
 	private val output by lazy { findViewById(R.id.et_output) as EditText }

@@ -5,6 +5,9 @@ import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.view.View
 import android.widget.Button
+import cyh.labCalculator.special.FirstActivity
+import cyh.labCalculator.special.SecondActivity
+import cyh.labCalculator.special.ThirdActivity
 
 class MainActivity : AppCompatActivity(),View.OnClickListener {
     private val btnLab1 by lazy { findViewById(R.id.lab1) as Button }
@@ -26,11 +29,11 @@ class MainActivity : AppCompatActivity(),View.OnClickListener {
                 startActivity(intent1)
             }
             R.id.lab2->{
-                val intent2:Intent=Intent(this,SecondActivity::class.java)
+                val intent2:Intent=Intent(this, SecondActivity::class.java)
                 startActivity(intent2)
             }
             R.id.lab3->{
-                val intent3:Intent=Intent(this,ThirdActivity::class.java)
+                val intent3:Intent=Intent(this, ThirdActivity::class.java)
                 startActivity(intent3)
             }
         }
