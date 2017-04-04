@@ -1,8 +1,8 @@
 package cyh.labCalculator.core
 
-import cyh.labCalculator.core.abstracts.LabQuantity
+import cyh.labCalculator.core.abstracts.Quantity
 
-class MeasuredQuantity : LabQuantity {
+class MeasuredQuantity : Quantity {
 	
 	//数据部分
 	val measuredValues:MutableList<Double> = ArrayList<Double>()

@@ -1,5 +1,5 @@
 package cyh.labCalculator.core.abstracts
 
-interface LabQuantity: LabObject {
+interface Quantity : LabObject {
 	val value:Double
 }
