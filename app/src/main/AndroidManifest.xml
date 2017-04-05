@@ -1,41 +1,42 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android"
-          package="cyh.labCalculator">
-
-    <application
-        android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
-        android:label="@string/AppName"
-        android:supportsRtl="true"
-        android:theme="@style/AppTheme">
-        <activity
-            android:name=".MainActivity"
-            android:label="LabCalculator">
-            
-        </activity>
-        <activity
-            android:name=".special.FirstActivity"
-            android:label="弦振动">
-        </activity>
-        <activity
-            android:name=".special.SecondActivity"
-            android:label="固体线膨胀系数">
-        </activity>
-        <activity
-            android:name=".special.ThirdActivity"
-            android:label="液体线膨胀系数第一问">
-        </activity>
-        <activity android:name=".special.FourthActivity">
-        </activity>
-
-        <activity android:name=".universal.UniversalCalculatorActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
-        
-                <category android:name="android.intent.category.LAUNCHER"/>
-            </intent-filter>
-        </activity>
-
-    </application>
+<manifest package="cyh.labCalculator"
+          xmlns:android="http://schemas.android.com/apk/res/android">
+	
+	<application
+		android:allowBackup="true"
+		android:icon="@mipmap/ic_launcher"
+		android:label="@string/AppName"
+		android:supportsRtl="true"
+		android:theme="@style/AppTheme"
+		android:fullBackupContent="true">
+		<activity
+			android:name=".MainActivity"
+			android:label="LabCalculator">
+		</activity>
+		<activity
+			android:name=".special.FirstActivity"
+			android:label="弦振动">
+		</activity>
+		<activity
+			android:name=".special.SecondActivity"
+			android:label="固体线膨胀系数">
+		</activity>
+		<activity
+			android:name=".special.ThirdActivity"
+			android:label="液体线膨胀系数第一问">
+		</activity>
+		<activity android:name=".special.FourthActivity">
+		</activity>
+			
+		<activity
+			android:name=".universal.UniversalActivity"
+			android:label="@string/AppName"
+			android:theme="@style/AppTheme.NoActionBar">
+			<intent-filter>
+				<action android:name="android.intent.action.MAIN"/>
+				<category android:name="android.intent.category.LAUNCHER"/>
+			</intent-filter>
+		</activity>
+	</application>
 
 </manifest>
