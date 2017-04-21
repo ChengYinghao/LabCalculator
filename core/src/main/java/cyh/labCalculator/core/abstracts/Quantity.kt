@@ -1,5 +1,7 @@
 package cyh.labCalculator.core.abstracts
 
+//抽象接口定义
+
 /**
  * 某个量
  */
@@ -28,7 +30,7 @@ interface DerivableQuantity {
 }
 
 
-//常用具体实现
+//常用具体类实现
 
 /**
  * 元常量
@@ -131,7 +133,17 @@ val NAN = ConstantQuantity(Double.NaN)
 
 //常用的符号运算
 
+/**
+ * 两个普通量相加
+ * @return 包含两个加数的[SumQuantity]
+ */
 operator fun Quantity.plus(quantity: Quantity) = SumQuantity(this, quantity)
+
+/**
+ * [SumQuantity]与其他普通变量相加
+ * 会将此[SumQuantity]中的加数和新的加数放到一起
+ * @return 包含原[SumQuantity]的加数和新加数的[SumQuantity]
+ */
 operator fun SumQuantity.plus(quantity: Quantity): SumQuantity {
 	val items = ArrayList<Quantity>(this.size + 1)
 	items.addAll(this.items)
@@ -139,7 +151,18 @@ operator fun SumQuantity.plus(quantity: Quantity): SumQuantity {
 	return SumQuantity(items)
 }
 
+/**
+ * 其他普通变量与[SumQuantity]相加
+ * 会将原[SumQuantity]中的加数和新的加数放到一起
+ * @return 包含原[SumQuantity]的加数和新加数的[SumQuantity]
+ */
 operator fun Quantity.plus(quantity: SumQuantity) = quantity.plus(this)
+
+/**
+ * [SumQuantity]与[SumQuantity]相加
+ * 会将原来的两个[SumQuantity]中的加数都放到一起
+ * @return 包含原来的两个[SumQuantity]的所有加数的[SumQuantity]
+ */
 operator fun SumQuantity.plus(quantity: SumQuantity): SumQuantity {
 	val items = ArrayList<Quantity>(this.size + quantity.size)
 	items.addAll(this.items)
