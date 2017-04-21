@@ -37,10 +37,7 @@ interface DerivableQuantity{
 data class ConstantQuantity(override val value: Double) : ElementQuantity, DerivableQuantity {
 	override fun derivative(target: PlaceholderQuantity)= ZERO
 }
-val ZERO = ConstantQuantity(0.0)
-val ONE = ConstantQuantity(1.0)
-val MINUS = ConstantQuantity(-1.0)
-val NAN = ConstantQuantity(Double.NaN)
+
 
 /**
  * 占位符量
@@ -67,7 +64,6 @@ class SumQuantity(items: Collection<Quantity>):RelatedQuantity,DerivableQuantity
 		return sum
 	}
 }
-
 
 class ProductQuantity:RelatedQuantity,DerivableQuantity{
 	override fun derivative(target: PlaceholderQuantity): Quantity {
@@ -111,6 +107,12 @@ class RelatedPowerQuantity:RelatedQuantity,DerivableQuantity{
 		get() = TODO("not implemented") //To change initializer of created properties use File | Settings | File Templates.
 }
 
+
+
+val ZERO = ConstantQuantity(0.0)
+val ONE = ConstantQuantity(1.0)
+val MINUS = ConstantQuantity(-1.0)
+val NAN = ConstantQuantity(Double.NaN)
 
 operator fun Quantity.plus(quantity: Quantity) = SumQuantity(this, quantity)
 operator fun SumQuantity.plus(quantity: Quantity): SumQuantity {
