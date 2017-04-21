@@ -8,7 +8,7 @@ interface Quantity : LabObject {
 }
 
 /**
- * 独立量
+ * 元量
  * 其取值与其余任何量独立
  */
 interface ElementQuantity : Quantity
@@ -28,8 +28,7 @@ interface DerivableQuantity {
 }
 
 
-
-
+//常用具体实现
 
 /**
  * 元常量
@@ -65,13 +64,12 @@ class SumQuantity(items: Collection<Quantity>) : RelatedQuantity, DerivableQuant
  * 乘法运算
  */
 class ProductQuantity(items: Collection<Quantity>) : RelatedQuantity, DerivableQuantity {
-	override fun derivative(target: VariableQuantity): Quantity {
-		TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
-	}
-	
 	override val value: Double
 		get() = TODO("not implemented") //To change initializer of created properties use File | Settings | File Templates.
 	
+	override fun derivative(target: VariableQuantity): Quantity {
+		TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+	}
 }
 
 /**
@@ -111,8 +109,8 @@ class RelatedPowerQuantity(val base: Quantity, val exponent: Quantity = ONE) : R
 }
 
 
-
 //常用的元常量
+
 /**
  * 元常量 1
  */
@@ -129,8 +127,6 @@ val MINUS = ConstantQuantity(-1.0)
  * 元常量 NaN （表示无意义）
  */
 val NAN = ConstantQuantity(Double.NaN)
-
-
 
 
 //常用的符号运算
