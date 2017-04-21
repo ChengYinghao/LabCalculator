@@ -23,7 +23,7 @@ interface RelatedQuantity:Quantity
  * 可以对该量关于某个独立量求导
  */
 interface DerivableQuantity{
-	fun derivative(target: ElementQuantity): Quantity
+	fun derivative(target: PlaceholderQuantity): Quantity
 }
 
 
@@ -35,7 +35,7 @@ interface DerivableQuantity{
  * 其取值不变
  */
 data class ConstantQuantity(override val value: Double) : ElementQuantity, DerivableQuantity {
-	override fun derivative(target: ElementQuantity)= ZERO
+	override fun derivative(target: PlaceholderQuantity)= ZERO
 }
 val ZERO = ConstantQuantity(0.0)
 val ONE = ConstantQuantity(1.0)
@@ -47,7 +47,7 @@ val NAN = ConstantQuantity(Double.NaN)
  * 在计算时才需要确定取值，可以指定其取值的常量
  */
 data class PlaceholderQuantity(override var value: Double):ElementQuantity,DerivableQuantity{
-	override fun derivative(target: ElementQuantity) = if(this==target) ONE else ZERO
+	override fun derivative(target: PlaceholderQuantity) = if(this==target) ONE else ZERO
 }
 
 
@@ -59,7 +59,7 @@ class SumQuantity(items: Collection<Quantity>):RelatedQuantity,DerivableQuantity
 	
 	
 	override val value: Double get() = items.sumByDouble { it.value }
-	override fun derivative(target: ElementQuantity): SumQuantity {
+	override fun derivative(target: PlaceholderQuantity): SumQuantity {
 		var sum = SumQuantity()
 		items.forEach { item ->
 			sum += (item as? DerivableQuantity)?.derivative(target) ?: NAN
@@ -70,7 +70,7 @@ class SumQuantity(items: Collection<Quantity>):RelatedQuantity,DerivableQuantity
 
 
 class ProductQuantity:RelatedQuantity,DerivableQuantity{
-	override fun derivative(target: ElementQuantity): Quantity {
+	override fun derivative(target: PlaceholderQuantity): Quantity {
 		TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
 	}
 	
@@ -79,7 +79,7 @@ class ProductQuantity:RelatedQuantity,DerivableQuantity{
 	
 }
 class DivisionQuantity:RelatedQuantity,DerivableQuantity{
-	override fun derivative(target: ElementQuantity): Quantity {
+	override fun derivative(target: PlaceholderQuantity): Quantity {
 		TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
 	}
 	
@@ -88,7 +88,7 @@ class DivisionQuantity:RelatedQuantity,DerivableQuantity{
 }
 
 class IntegerPowerQuantity:RelatedQuantity,DerivableQuantity{
-	override fun derivative(target: ElementQuantity): Quantity {
+	override fun derivative(target: PlaceholderQuantity): Quantity {
 		TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
 	}
 	
@@ -96,7 +96,7 @@ class IntegerPowerQuantity:RelatedQuantity,DerivableQuantity{
 		get() = TODO("not implemented") //To change initializer of created properties use File | Settings | File Templates.
 }
 class RealPowerQuantity:RelatedQuantity,DerivableQuantity{
-	override fun derivative(target: ElementQuantity): Quantity {
+	override fun derivative(target: PlaceholderQuantity): Quantity {
 		TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
 	}
 	
@@ -104,7 +104,7 @@ class RealPowerQuantity:RelatedQuantity,DerivableQuantity{
 		get() = TODO("not implemented") //To change initializer of created properties use File | Settings | File Templates.
 }
 class RelatedPowerQuantity:RelatedQuantity,DerivableQuantity{
-	override fun derivative(target: ElementQuantity): Quantity {
+	override fun derivative(target: PlaceholderQuantity): Quantity {
 		TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
 	}
 	override val value: Double
