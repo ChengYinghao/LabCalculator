@@ -37,8 +37,6 @@ interface DerivableQuantity{
 data class ConstantQuantity(override val value: Double) : ElementQuantity, DerivableQuantity {
 	override fun derivative(target: PlaceholderQuantity)= ZERO
 }
-
-
 /**
  * 占位符量
  * 在计算时才需要确定取值，可以指定其取值的常量
@@ -46,7 +44,6 @@ data class ConstantQuantity(override val value: Double) : ElementQuantity, Deriv
 data class PlaceholderQuantity(override var value: Double):ElementQuantity,DerivableQuantity{
 	override fun derivative(target: PlaceholderQuantity) = if(this==target) ONE else ZERO
 }
-
 
 class SumQuantity(items: Collection<Quantity>):RelatedQuantity,DerivableQuantity{
 	val items:List<Quantity> =ArrayList<Quantity>().apply { addAll(items) }
