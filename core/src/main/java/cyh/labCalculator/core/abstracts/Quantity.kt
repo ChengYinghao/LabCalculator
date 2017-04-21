@@ -28,18 +28,20 @@ interface DerivableQuantity{
 
 
 
+
+
 /**
  * 常量
  * 其取值不变
  */
-data class ConstantQuantity(override val value:Double):ElementQuantity,DerivableQuantity{
+data class ConstantQuantity(override val value: Double) : ElementQuantity, DerivableQuantity {
 	override val derivative get() = ConstantQuantity.ZERO
-	companion object{
-		@JvmStatic val ZERO =ConstantQuantity(0.0)
+	companion object {
+		@JvmStatic val ZERO = ConstantQuantity(0.0)
+		@JvmStatic val ONE = ConstantQuantity(1.0)
+		@JvmStatic val MINUS = ConstantQuantity(-1.0)
 	}
 }
-
-
 /**
  * 占位符量
  * 在计算时才需要确定取值，可以指定其取值的常量
@@ -48,9 +50,6 @@ data class PlaceholderQuantity(override var value: Double):ElementQuantity,Deriv
 	override val derivative get() =ConstantQuantity.ZERO
 }
 
-
-
-
 class SumQuantity:RelatedQuantity,DerivableQuantity{
 	override val value: Double
 		get() = TODO("not implemented") //To change initializer of created properties use File | Settings | File Templates.
@@ -58,3 +57,38 @@ class SumQuantity:RelatedQuantity,DerivableQuantity{
 		get() = TODO("not implemented") //To change initializer of created properties use File | Settings | File Templates.
 	
 }
+
+class ProductQuantity:RelatedQuantity,DerivableQuantity{
+	override val value: Double
+		get() = TODO("not implemented") //To change initializer of created properties use File | Settings | File Templates.
+	override val derivative: Quantity
+		get() = TODO("not implemented") //To change initializer of created properties use File | Settings | File Templates.
+	
+}
+class DivisionQuantity:RelatedQuantity,DerivableQuantity{
+	override val value: Double
+		get() = TODO("not implemented") //To change initializer of created properties use File | Settings | File Templates.
+	override val derivative: Quantity
+		get() = TODO("not implemented") //To change initializer of created properties use File | Settings | File Templates.
+}
+
+class IntegerPowerQuantity:RelatedQuantity,DerivableQuantity{
+	override val value: Double
+		get() = TODO("not implemented") //To change initializer of created properties use File | Settings | File Templates.
+	override val derivative: Quantity
+		get() = TODO("not implemented") //To change initializer of created properties use File | Settings | File Templates.
+}
+class RealPowerQuantity:RelatedQuantity,DerivableQuantity{
+	override val value: Double
+		get() = TODO("not implemented") //To change initializer of created properties use File | Settings | File Templates.
+	override val derivative: Quantity
+		get() = TODO("not implemented") //To change initializer of created properties use File | Settings | File Templates.
+}
+class RelatedPowerQuantity:RelatedQuantity,DerivableQuantity{
+	override val value: Double
+		get() = TODO("not implemented") //To change initializer of created properties use File | Settings | File Templates.
+	override val derivative: Quantity
+		get() = TODO("not implemented") //To change initializer of created properties use File | Settings | File Templates.
+}
+
+
