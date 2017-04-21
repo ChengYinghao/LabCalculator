@@ -106,6 +106,8 @@ class RelatedPowerQuantity:RelatedQuantity,DerivableQuantity{
 
 
 
+
+
 val ZERO = ConstantQuantity(0.0)
 val ONE = ConstantQuantity(1.0)
 val MINUS = ConstantQuantity(-1.0)
