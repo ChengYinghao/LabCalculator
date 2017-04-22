@@ -1,7 +1,5 @@
 package cyh.labCalculator.core
 
-import cyh.labCalculator.core.abstracts.Quantity
-
 class MeasuredQuantity : Quantity {
 	
 	//数据部分

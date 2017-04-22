@@ -1,4 +1,4 @@
-package cyh.labCalculator.core.abstracts
+package cyh.labCalculator.core
 
 //抽象接口定义
 

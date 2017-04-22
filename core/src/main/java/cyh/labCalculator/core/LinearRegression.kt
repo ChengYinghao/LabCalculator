@@ -1,7 +1,5 @@
 package cyh.labCalculator.core
 
-import cyh.labCalculator.core.abstracts.LabObject
-
 class LinearRegression : LabObject {
 	
 	val points = ArrayList<LabPoint>()
