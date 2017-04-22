@@ -1,6 +1,6 @@
 package cyh.labCalculator.coreTest
 
-import cyh.labCalculator.core.graph.MeasuredQuantity
+import cyh.labCalculator.core.structed.MeasuredQuantity
 import org.junit.Test
 import org.junit.runner.RunWith
 import org.junit.runners.BlockJUnit4ClassRunner

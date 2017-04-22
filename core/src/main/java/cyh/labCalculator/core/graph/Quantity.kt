@@ -87,6 +87,18 @@ class IntegerPowerQuantity(val base: Quantity, val exponent: Int = 1) : RelatedQ
 }
 
 /**
+ * 开根号运算
+ */
+class RootPowerQuantity(val base: Quantity, val exponent: Int = 1) : RelatedQuantity, DerivableQuantity {
+	override val value: Double
+		get() = TODO("not implemented") //To change initializer of created properties use File | Settings | File Templates.
+	
+	override fun derivative(target: VariableQuantity): Quantity {
+		TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+	}
+}
+
+/**
  * 实数幂运算
  */
 class RealPowerQuantity(val base: Quantity, val exponent: Double = 1.0) : RelatedQuantity, DerivableQuantity {

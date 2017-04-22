@@ -1,4 +1,6 @@
-package cyh.labCalculator.core.graph
+package cyh.labCalculator.core.structed
+
+import cyh.labCalculator.core.graph.LabObject
 
 class LinearRegression : LabObject {
 	
