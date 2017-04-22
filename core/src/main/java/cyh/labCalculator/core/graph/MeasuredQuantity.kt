@@ -1,4 +1,4 @@
-package cyh.labCalculator.core
+package cyh.labCalculator.core.graph
 
 class MeasuredQuantity : Quantity {
 	

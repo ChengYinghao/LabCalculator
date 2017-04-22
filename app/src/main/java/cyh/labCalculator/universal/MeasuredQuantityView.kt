@@ -8,7 +8,7 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
 import cyh.labCalculator.R
-import cyh.labCalculator.core.MeasuredQuantity
+import cyh.labCalculator.core.graph.MeasuredQuantity
 
 class MeasuredQuantityView(context: Context)
 	: ConstraintLayout(context) {
